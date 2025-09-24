@@ -22,7 +22,7 @@ jobs:
     runs-on: ${{ matrix.machineTag }}
 
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v4
 
     - uses: ilammy/msvc-dev-cmd@v1
 
@@ -56,7 +56,7 @@ jobs:
     runs-on: ${{ matrix.machineTag }}
 
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v4
 
     - name: Get Lua from cache
       uses: './'
