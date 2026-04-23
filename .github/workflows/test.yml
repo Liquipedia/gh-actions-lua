@@ -24,7 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v6
 
-    - uses: ilammy/msvc-dev-cmd@v1
+    - uses: step-security/msvc-dev-cmd@v1
 
     - name: Build Lua
       uses: './'
