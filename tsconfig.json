@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "types": ["node"],
     "noImplicitAny": true, 
     "strictNullChecks": true,
     "skipLibCheck": true  
