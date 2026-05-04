@@ -4,7 +4,14 @@
   "description": "Build and install Lua",
   "main": "main.js",
   "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "scripts": {
+    "bundle": "npm run format:write && npm run package",
+    "format:write": "npx prettier --write .",
+    "package": "npx rimraf ./dist && npx rollup --config rollup.config.js",
+    "package:watch": "npm run package -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "leaf corcoran <leafot@gmail.com>",
@@ -14,6 +21,10 @@
     "@actions/core": "^3.0.1",
     "@actions/exec": "^3.0.0",
     "@actions/io": "^3.0.2",
-    "@actions/tool-cache": "^4.0.0"
+    "@actions/tool-cache": "^4.0.0",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "rollup": "^4.57.1"
   }
 }
