@@ -221,7 +221,7 @@ async function install_plain_lua(luaInstallPath, luaVersion) {
     await exec.exec("brew install readline ncurses")
   } else {
     const sudo = (process.getuid && process.getuid() === 0) ? "" : "sudo ";
-    await exec.exec(`${sudo}apt-get install -q libreadline-dev libncurses-dev`, undefined, {
+    await exec.exec(`${sudo}apt-get install -y -q libreadline-dev libncurses-dev`, undefined, {
       env: {
         DEBIAN_FRONTEND: "noninteractive",
         TERM: "linux"
