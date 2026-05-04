@@ -8,8 +8,6 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "bundle": "npm run format:write && npm run package",
-    "format:write": "npx prettier --write .",
     "package": "npx rimraf ./dist && npx rollup --config rollup.config.js",
     "package:watch": "npm run package -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
